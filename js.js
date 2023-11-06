@@ -74,9 +74,7 @@ var md = new MobileDetect(window.navigator.userAgent);
 // Funkcija za izvršavanje redirekcije
 function redirectToApp() {
   var currentUrl = window.location.href; // Dobijanje trenutnog URL-a
-  if (md.is("iPhone") || md.is("iPad") || md.is("iPod")) {
-    window.location.href = "https://apps.apple.com/gb/app/meridianbet-com/id1145886101";
-  } else if (md.is("AndroidOS")) {
+   if(md.is("AndroidOS")) {
     window.location.href =
       "https://coupons.joker.co.rs/~android/ke/app-ke-release.apk";
   } else {
