@@ -74,7 +74,7 @@ var md = new MobileDetect(window.navigator.userAgent);
 // Funkcija za izvršavanje redirekcije
 function redirectToApp() {
   var currentUrl = window.location.href; // Dobijanje trenutnog URL-a
-   if(md.is("AndroidOS")) {
+  if (md.is("AndroidOS")) {
     window.location.href =
       "https://coupons.joker.co.rs/~android/ke/app-ke-release.apk";
   } else {
