@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Application</title>
+    <title>Meridianbet Mobile Application</title>
     <link rel="icon" href="./img/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,10 +32,8 @@
       </div>
       <div class="btnLng">
         <div class="btn">
-          <a href="https://meridianbet.ke/en/registration" target="_blank"
-            >Register</a
-          >
-          <a href="https://meridianbet.ke/en/betting" target="_blank">Login</a>
+          <a class="join-now" href="#" target="_blank">Register</a>
+          <a class="home" href="#" target="_blank">Login</a>
         </div>
 
         <div id="content"></div>
@@ -242,8 +240,21 @@
         </p>
       </div>
     </footer>
+    <script src="/jquery-1.12.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="mobile-detect.js"></script>
     <script src="js.js"></script>
+    <script>
+      var pathArray = document.URL.split("/");
+      var secondLevelLocation = pathArray[4];
+      var newURL =
+        "https://meridianbet.ke/en/registration" + secondLevelLocation;
+      var homeURL = "https://meridianbet.ke/en/betting" + secondLevelLocation;
+      console.log(newURL);
+      console.log(homeURL);
+
+      $(".join-now").attr("href", newURL);
+      $(".home").attr("href", homeURL);
+    </script>
   </body>
 </html>
